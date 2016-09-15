@@ -1,7 +1,7 @@
 {
-  "name": "redux-counter-example",
+  "name": "documenter",
   "version": "0.0.0",
-  "description": "Redux counter example",
+  "description": "",
   "scripts": {
     "start": "node server.js",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/redux.git"
+    "url": "https://github.com/vpodolyan/documenter.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reactjs/redux/issues"
+    "url": "https://github.com/vpodolyan/documenter/issues"
   },
-  "homepage": "http://redux.js.org",
+  "homepage": "",
   "dependencies": {
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
