@@ -5,6 +5,7 @@ import reducers from './reducers'
 
 import Counter from './components/Counter'
 import Document from './components/Document'
+import Form from './components/Form'
 
 const store = createStore(reducers)
 const rootEl = document.getElementById('root')
@@ -16,7 +17,7 @@ function render() {
       value={store.getState().counter}
       onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
       onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
-    /> <Document />
+    /> <Document /> <Form />
     </div>,
     rootEl
   )
