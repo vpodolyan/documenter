@@ -5,8 +5,7 @@ import { createStore } from 'redux'
 import reducers from './reducers'
 
 import Counter from './components/Counter'
-import Document from './components/Document'
-import Form from './components/Form'
+import App from './components/App'
 
 const store = createStore(reducers)
 
@@ -15,11 +14,11 @@ const rootEl = document.getElementById('root')
 function render() {
   ReactDOM.render(
       <div>
-    <Counter
-      value={store.getState().counter}
-      onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
-      onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
-    />, <Document /> <Form />
+        <Counter
+          value={store.getState().counter}
+          onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
+          onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
+        />, <App store={store} />
     </div>,
     rootEl
   )
