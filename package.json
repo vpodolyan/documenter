@@ -1,6 +1,6 @@
 {
   "name": "documenter",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "scripts": {
     "start": "node server.js",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/redux.git"
+    "url": "https://github.com/vpodolyan/documenter.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reactjs/redux/issues"
+    "url": "https://github.com/vpodolyan/documenter/issues"
   },
-  "homepage": "http://redux.js.org",
+  "homepage": "",
   "dependencies": {
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
