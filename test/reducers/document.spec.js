@@ -1,22 +1,29 @@
 import expect from 'expect';
-import documentReducer from '../../reducers/document';
+import documentReducer from '../../src/reducers/document';
+import { updateDocument } from '../../src/actions'
 
 describe('Document reducer tests', () =>{
     it('should update field', () => {
-        const beforeState = {
-            name: 'test',
-            price: 10
-        }
-        const afterState = {
-            name: 'updated',
-            price: 10
-        }
-        const action = {
-            type: 'UPDATE_DOCUMENT',
-            field: 'name',
-            value: afterState.name
-        }
+        const beforeState = [
+            {
+                name: 'first',
+                value: 10
+            },
+            {
+                name: 'second',
+                value: 0
+            }]
 
-        expect(documentReducer(beforeState, action)).toEqual(afterState);
+        const afterState = [
+            {
+                name: 'first',
+                value: 10
+            },
+            {
+                name: 'second',
+                value: 100
+            }]
+
+        expect(documentReducer(beforeState, updateDocument('second', 100))).toEqual(afterState);
     })
 })

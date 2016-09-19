@@ -1,7 +1,7 @@
 import expect from 'expect'
 import React from 'react'
 import { shallow } from 'enzyme'
-import Label from '../../components/Label'
+import Label from '../../src/components/Label'
 
 function setup(text) {
     const component = shallow(

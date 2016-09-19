@@ -1,5 +1,5 @@
 import React from 'react';
-import Document from './Document';
+import Document from '../containers/Document';
 import Form from './Form';
 
 const App = () => (
