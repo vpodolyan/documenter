@@ -1,4 +1,4 @@
-export default function document(state = [{name: 'first', value: ''}], action) {
+export default function document(state = [{name: 'first', value: ''}, {name: 'second', value: ''}], action) {
     switch (action.type) {
         case "UPDATE_DOCUMENT":
             return state.map((field) => {

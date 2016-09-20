@@ -3,7 +3,10 @@ import React from 'react'
 import InputText from '../containers/InputText'
 
 const Form = () => (
-    <InputText field={'first'} />
+    <div className="form">
+        <InputText field={'first'} />
+        <InputText field={'second'} />
+    </div>
 )
 
 export default Form;

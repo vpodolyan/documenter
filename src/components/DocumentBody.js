@@ -3,8 +3,8 @@ import React, {PropTypes} from 'react'
 import Label from './Label'
 
 const DocumentBody = ({fields}) => (
-    <div>
-    <h1>Title</h1>
+    <div className="document">
+        <h1>Title</h1>
         {fields.map(({name, value}) =>
             <Label key={name} name={name} text={value} />
         )}
