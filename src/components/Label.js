@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Label = (props) => {
+const Label = ({fields, name}) => {
     return (
-        <span>{props.text}</span>
+        <span>{fields[name].value}</span>
     );
 }
 

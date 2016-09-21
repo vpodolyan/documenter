@@ -6,17 +6,17 @@ const DocumentBody = ({fields}) => (
     <div className="document">
         <div className="document-content">
             <h1>Title</h1>
-            {fields.map(({name, value}) =>
-                <Label key={name} name={name} text={value} />
-            )}
+            Hello,
+            <Label fields={fields} name={'first'} /><br />
+            Goodbye
+            <Label fields={fields} name={'first'} />
         </div>
     </div>
 )
 
 DocumentBody.propTypes = {
-  fields: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    value: PropTypes.isRequired,
+  fields: PropTypes.shape(PropTypes.shape({
+    value: PropTypes.isRequired
   }).isRequired).isRequired
 }
 

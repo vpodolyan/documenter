@@ -3,9 +3,9 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Label from '../../src/components/Label'
 
-function setup(text) {
+function setup(fields, fieldName) {
     const component = shallow(
-        <Label text={text} />
+        <Label fields={fields} name={fieldName} />
     )
 
     return { component }
@@ -13,8 +13,13 @@ function setup(text) {
 
 describe('Label component', () => {
     it('should display text', () => {
-        const targetText = "Test text";
-        const { component } = setup(targetText);
-        expect(component.find('span').text()).toBe(targetText);
+        const fields = {
+            first: {
+                value: 'test text'
+            }
+        }
+
+        const { component } = setup(fields, 'first');
+        expect(component.find('span').text()).toBe(fields.first.value);
     })
 })

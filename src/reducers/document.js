@@ -1,13 +1,27 @@
-export default function document(state = [{name: 'first', value: ''}, {name: 'second', value: ''}], action) {
+const initialState = {
+    first: {
+        value: 10
+    },
+    second: {
+        value: 0
+    }}
+
+export default function document(state = initialState, action) {
     switch (action.type) {
         case "UPDATE_DOCUMENT":
-            return state.map((field) => {
-                if (field.name !== action.name) {
-                    return field
+            return {
+                ...state,
+                [action.name]: {
+                    value: action.value
                 }
-
-                return Object.assign({}, field, { value: action.value })
-            })
+            }
+            // return state.map((field) => {
+            //     if (field.name !== action.name) {
+            //         return field
+            //     }
+            //
+            //     return Object.assign({}, field, { value: action.value })
+            // })
         default:
             return state
     }
