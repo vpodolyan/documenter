@@ -1,7 +1,38 @@
-.form {
-    float: left;
+.app-wrapper {
+    padding: 10px 0;
+}
+
+.document-wrapper {
+    background-color: rgb(238, 238, 238);
 }
 
 .document {
-    float: right;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px;
+    border: 1px solid rgb(153, 153, 153);
+    margin: 10px;
+}
+
+.document-content {
+    margin: 0 20px;
+}
+
+.form {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 45px 15px 15px;
+}
+
+.form::after{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Data input form";
 }

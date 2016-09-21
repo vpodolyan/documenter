@@ -4,10 +4,12 @@ import Label from './Label'
 
 const DocumentBody = ({fields}) => (
     <div className="document">
-        <h1>Title</h1>
-        {fields.map(({name, value}) =>
-            <Label key={name} name={name} text={value} />
-        )}
+        <div className="document-content">
+            <h1>Title</h1>
+            {fields.map(({name, value}) =>
+                <Label key={name} name={name} text={value} />
+            )}
+        </div>
     </div>
 )
 

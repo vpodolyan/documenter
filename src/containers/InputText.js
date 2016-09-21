@@ -4,7 +4,9 @@ import { updateDocument } from '../actions'
 
 let InputText = ({ dispatch, field }) => {
     return (
-        <input type='text' onChange={e =>
+        <input type='text'
+            className='form-control'
+            onChange={e =>
                 dispatch(updateDocument(field, e.target.value))
             } />
     )
