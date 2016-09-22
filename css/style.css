@@ -13,7 +13,7 @@
     margin: 10px;
 }
 
-.document-content {
+.document__content {
     margin: 0 20px;
 }
 
@@ -35,4 +35,12 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     content: "Data input form";
+}
+
+.date-picker__calendar {
+    display: block;
+}
+
+.date-picker__calendar_hidden {
+    display: none !important;
 }

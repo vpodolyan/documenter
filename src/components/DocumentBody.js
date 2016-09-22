@@ -4,7 +4,7 @@ import Label from './Label'
 
 const DocumentBody = ({fields}) => (
     <div className="document">
-        <div className="document-content">
+        <div className="document__content">
             <h1>Title</h1>
             Hello,
             <Label fields={fields} name={'first'} /><br />
