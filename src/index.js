@@ -6,6 +6,8 @@ import { Provider } from 'react-redux'
 import App from './components/App'
 import reducers from './reducers'
 
+import '../css/document.css'
+
 const store = createStore(reducers)
 
 const rootElement = document.getElementById('root')

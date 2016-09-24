@@ -1,0 +1,24 @@
+.city-label {
+    float: left;
+}
+
+.date-label {
+    float: right;
+}
+
+.document__content__row {
+    padding: 15px 0;
+}
+
+.document__content__title {
+    text-align: center;
+}
+
+.document__content__name {
+    clear: both;
+}
+
+.document__content__passport, .document__content__issuedBy {
+    display: inline-block;
+    width: 50%
+}

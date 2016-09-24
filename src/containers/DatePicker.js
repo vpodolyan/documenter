@@ -2,41 +2,43 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { updateDocument } from '../actions'
 
-import '../../node_modules/react-day-picker/lib/style.css'
-// import TinyDatePicker from 'tiny-date-picker'
-
 import DayPicker from 'react-day-picker'
+import '../../node_modules/react-day-picker/lib/style.css'
 
 class DatePicker extends React.Component {
     constructor() {
         super();
+
+        this.state = { visible: false }
     }
 
-    // componentDidMount() {
-    //     TinyDatePicker(this.input)
-    //     this.input.readOnly = false
-    // }
-
+    onInputClick() {
+        this.setState({ visible: true });
+    }
 
 
     render() {
         const { dispatch, field } = this.props;
         return (
             <div className='date-picker'>
-            <input type='text' ref='input' onClick={(e)=>{
-                this.refs.daypicker.className = 'date-picker__calendar'
+            <input type='text' className='form-control' ref='input'
+                onFocus={(e)=>{
+                this.onInputClick();
             }}/>
-            <DayPicker className='date-picker__calendar_hidden'
-                ref='daypicker'
-                onDayClick={(e, day) => {
+            { this.state.visible &&
+                <div style={{ position: 'relative' }}>
+                    <DayPicker className='date-picker__calendar'
+                        ref='daypicker'
+                        onDayClick={(e, day) => {
+                            const date = day.toLocaleDateString()
+                            this.refs.input.value = date
 
-                const date = day.toLocaleDateString()
-                this.refs.input.value = date
-                this.refs.daypicker.className = 'date-picker__calendar_hidden'
+                            dispatch(updateDocument(field, date))
 
-                dispatch(updateDocument(field, date))
-                // console.log(day.toLocaleDateString())
-            }} />
+                            this.setState({ visible: false })
+                    }} />
+                </div>
+            }
             </div>
 
 

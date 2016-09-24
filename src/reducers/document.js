@@ -1,10 +1,29 @@
 const initialState = {
-    first: {
-        value: 10
+    city: {
+        value: 'Тверь'
     },
-    second: {
-        value: 0
-    }}
+    date: {
+        value: ''
+    },
+    firstName: {
+        value: ''
+    },
+    lastName: {
+        value: ''
+    },
+    middleName: {
+        value: ''
+    },
+    address: {
+        value: ''
+    },
+    passportNum: {
+        value: ''
+    },
+    passportIssuedBy: {
+        value: ''
+    }
+}
 
 export default function document(state = initialState, action) {
     switch (action.type) {
@@ -15,13 +34,6 @@ export default function document(state = initialState, action) {
                     value: action.value
                 }
             }
-            // return state.map((field) => {
-            //     if (field.name !== action.name) {
-            //         return field
-            //     }
-            //
-            //     return Object.assign({}, field, { value: action.value })
-            // })
         default:
             return state
     }

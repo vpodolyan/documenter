@@ -37,8 +37,10 @@
     content: "Data input form";
 }
 
-.date-picker__calendar {
-    display: block;
+.DayPicker.date-picker__calendar {
+    position: absolute;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
 }
 
 .date-picker__calendar_hidden {
