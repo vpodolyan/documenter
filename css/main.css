@@ -1,0 +1,14 @@
+.app-wrapper {
+    padding: 10px 0;
+}
+
+.document-wrapper {
+    background-color: rgb(238, 238, 238);
+}
+
+.DayPicker.date-picker__calendar {
+    position: absolute;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+    z-index: 100;
+}

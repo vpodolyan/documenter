@@ -1,6 +1,6 @@
 const initialState = {
     city: {
-        value: 'Тверь'
+        value: ''
     },
     date: {
         value: ''
@@ -21,6 +21,24 @@ const initialState = {
         value: ''
     },
     passportIssuedBy: {
+        value: ''
+    },
+    representativeLastName: {
+        value: ''
+    },
+    representativeFirstName: {
+        value: ''
+    },
+    representativeMiddleName: {
+        value: ''
+    },
+    representativePassportNum: {
+        value: ''
+    },
+    representativePassportIssuedBy: {
+        value: ''
+    },
+    expireDate: {
         value: ''
     }
 }

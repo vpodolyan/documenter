@@ -1,24 +1,65 @@
-.city-label {
-    float: left;
+.document {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px;
+    border: 1px solid rgb(153, 153, 153);
+    margin: 10px;
 }
 
-.date-label {
+.document__content {
+    margin: 0 20px;
+}
+
+.document__content__city-label {
+    float: left;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.document__content__date-label {
     float: right;
+    font-style: italic;
+    font-weight: lighter;
 }
 
 .document__content__row {
     padding: 15px 0;
+    text-align: justify;
 }
 
 .document__content__title {
     text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
 .document__content__name {
     clear: both;
 }
 
-.document__content__passport, .document__content__issuedBy {
+.document__content__passport {
+    float: left;
+    width: 35%;
+}
+
+.document__content__issuedBy {
+}
+
+.document__content__splitter {
+    border: 1px solid black;
+}
+
+.document__content__signature {
     display: inline-block;
-    width: 50%
+    width: 50%;
+}
+
+.document__content__signature__placeholder {
+    width: 50%;
+    border-bottom: 1px solid black;
+}
+
+.document__content__signature-author {
+    display: inline-block;
+    width: 50%;
+    border-bottom: 1px solid black;
 }
