@@ -5,10 +5,14 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import App from './components/App'
 import reducers from './reducers'
+import Storage from './utils/storage'
+import emptyDoc from './consts/emptyDocument'
 
 import '../css/main.css'
 
-const store = createStore(reducers)
+const docStorage = new Storage()
+
+const store = createStore(reducers, { doc: docStorage.loadDoc() || emptyDoc })
 
 const rootElement = document.getElementById('root')
 render(
