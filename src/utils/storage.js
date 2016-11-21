@@ -23,13 +23,14 @@ export default class Storage {
         if (!this.available) return;
 
         let storage = window[this.type];
-        storage.setItem(this.itemName, document);
+        storage.setItem(this.itemName, JSON.stringify(document));
     }
 
     loadDoc() {
         if (!this.available) return {};
 
-        let storage = window[this.type];
-        return storage.getItem(this.itemName);
+        const storage = window[this.type];
+        const item = storage.getItem(this.itemName);
+        return item != undefined ? JSON.parse(item) : undefined;
     }
 }

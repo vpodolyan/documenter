@@ -1,7 +1,7 @@
 // import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import App from './components/App'
 import reducers from './reducers'
@@ -10,9 +10,18 @@ import emptyDoc from './consts/emptyDocument'
 
 import '../css/main.css'
 
+
+const saveDocToStorage = store => next => action => {
+    let result = next(action);
+
+    docStorage.saveDoc(store.getState().doc);
+
+    return result;
+}
+
 const docStorage = new Storage()
 
-const store = createStore(reducers, { doc: docStorage.loadDoc() || emptyDoc })
+const store = createStore(reducers, { doc: docStorage.loadDoc() || emptyDoc }, applyMiddleware(saveDocToStorage))
 
 const rootElement = document.getElementById('root')
 render(
