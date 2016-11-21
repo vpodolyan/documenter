@@ -5,59 +5,59 @@ import DatePicker from '../containers/DatePicker'
 
 import '../../css/form.css'
 
-const Form = () => (
+const Form = ({doc}) => (
     <form className="form">
         <div className="form-group">
             <label>Город</label>
-            <InputText field={'city'} />
+            <InputText doc={doc} field={'city'} />
         </div>
         <div className="form-group">
             <label>Дата</label>
-            <DatePicker field={'date'}/>
+            <DatePicker doc={doc} field={'date'}/>
         </div>
         <div className="form-group">
             <label>Фамилия</label>
-            <InputText field={'lastName'}/>
+            <InputText doc={doc} field={'lastName'}/>
         </div>
         <div className="form-group">
             <label>Имя</label>
-            <InputText field={'firstName'}/>
+            <InputText doc={doc} field={'firstName'}/>
         </div>
         <div className="form-group">
             <label>Отчество</label>
-            <InputText field={'middleName'}/>
+            <InputText doc={doc} field={'middleName'}/>
         </div>
         <div className="form-group">
             <label>Адрес</label>
-            <InputText field={'address'}/>
+            <InputText doc={doc} field={'address'}/>
         </div>
         <div className="form-group">
             <label>Паспорт (номер/серия)</label>
-            <InputText field={'passportNum'}/>
+            <InputText doc={doc} field={'passportNum'}/>
         </div>
         <div className="form-group">
             <label>Паспорт выдан</label>
-            <InputText field={'passportIssuedBy'}/>
+            <InputText doc={doc} field={'passportIssuedBy'}/>
         </div>
         <div className="form-group">
             <label>Фамилия доверенного лица</label>
-            <InputText field={'representativeLastName'}/>
+            <InputText doc={doc} field={'representativeLastName'}/>
         </div>
         <div className="form-group">
             <label>Имя доверенного лица</label>
-            <InputText field={'representativeFirstName'}/>
+            <InputText doc={doc} field={'representativeFirstName'}/>
         </div>
         <div className="form-group">
             <label>Отчество доверенного лица</label>
-            <InputText field={'representativeMiddleName'}/>
+            <InputText doc={doc} field={'representativeMiddleName'}/>
         </div>
         <div className="form-group">
             <label>Паспорт (номер/серия) доверенного лица</label>
-            <InputText field={'representativePassportNum'}/>
+            <InputText doc={doc} field={'representativePassportNum'}/>
         </div>
         <div className="form-group">
             <label>Паспорт доверенного лица выдан</label>
-            <InputText field={'representativePassportIssuedBy'}/>
+            <InputText doc={doc} field={'representativePassportIssuedBy'}/>
         </div>
         <div className="form-group">
             <label>Дата окончания действия доверенности</label>
