@@ -61,7 +61,7 @@ const Form = ({doc}) => (
         </div>
         <div className="form-group">
             <label>Дата окончания действия доверенности</label>
-            <DatePicker field={'expireDate'}/>
+            <DatePicker doc={doc} field={'expireDate'}/>
         </div>
     </form>
 )
