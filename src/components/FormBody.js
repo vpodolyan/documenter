@@ -5,7 +5,7 @@ import DatePicker from '../containers/DatePicker'
 
 import '../../css/form.css'
 
-const Form = ({doc}) => (
+const FormBody = ({doc}) => (
     <form className="form">
         <div className="form-group">
             <label>Город</label>
@@ -66,4 +66,4 @@ const Form = ({doc}) => (
     </form>
 )
 
-export default Form;
+export default FormBody;

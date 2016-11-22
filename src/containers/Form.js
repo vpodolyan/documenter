@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Form from '../components/Form'
+import FormBody from '../components/FormBody'
 
 const mapStateToProps = (state) => {
   return {
@@ -7,8 +7,8 @@ const mapStateToProps = (state) => {
   }
 }
 
-const FormContainer = connect(
+const Form = connect(
   mapStateToProps
-)(Form)
+)(FormBody)
 
-export default FormContainer
+export default Form
