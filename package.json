@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ignore-styles",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "deploy": "node ./node_modules/webpack/bin/webpack.js && node ./deploy.js"
   },
   "repository": {
     "type": "git",
