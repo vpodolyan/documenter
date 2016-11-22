@@ -53,10 +53,11 @@ class DatePicker extends React.Component {
     }
 
     render() {
-        const { dispatch, field } = this.props;
+        const { dispatch, field, doc } = this.props;
         return (
             <div className='date-picker' onMouseDown={(e)=> this.onContainerMouseDown(e)}>
                 <input type='text'
+                    value={doc[field].value}
                     className='form-control'
                     ref='input'
                     onFocus={(e) => this.onInputFocus(e) }

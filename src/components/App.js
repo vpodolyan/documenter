@@ -1,6 +1,6 @@
 import React from 'react';
 import Document from '../containers/Document';
-import Form from './Form';
+import Form from '../containers/Form';
 
 const App = () => (
     <div className="container app-wrapper">
