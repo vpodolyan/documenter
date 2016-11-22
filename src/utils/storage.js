@@ -27,10 +27,13 @@ export default class Storage {
     }
 
     loadDoc() {
-        if (!this.available) return {};
+        if (!this.available) return;
 
         const storage = window[this.type];
         const item = storage.getItem(this.itemName);
-        return item != undefined ? JSON.parse(item) : undefined;
+
+        if (item) return JSON.parse(item)
+
+        return item;
     }
 }

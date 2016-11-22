@@ -7,21 +7,16 @@ import App from './components/App'
 import reducers from './reducers'
 import Storage from './utils/storage'
 import emptyDoc from './consts/emptyDocument'
+import createSaveDocumentMiddleware from './middleware/saveDocument'
 
 import '../css/main.css'
 
 
-const saveDocToStorage = store => next => action => {
-    let result = next(action);
-
-    docStorage.saveDoc(store.getState().doc);
-
-    return result;
-}
-
 const docStorage = new Storage()
 
-const store = createStore(reducers, { doc: docStorage.loadDoc() || emptyDoc }, applyMiddleware(saveDocToStorage))
+const saveDocument = createSaveDocumentMiddleware(docStorage)
+
+const store = createStore(reducers, { doc: docStorage.loadDoc() || emptyDoc }, applyMiddleware(saveDocument))
 
 const rootElement = document.getElementById('root')
 render(
