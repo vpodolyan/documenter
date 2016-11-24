@@ -14,9 +14,11 @@ import '../css/main.css'
 
 const docStorage = new Storage()
 
-const saveDocument = createSaveDocumentMiddleware(docStorage)
+const store = createStore(reducers, { doc: docStorage.loadDoc() || emptyDoc })
 
-const store = createStore(reducers, { doc: docStorage.loadDoc() || emptyDoc }, applyMiddleware(saveDocument))
+store.subscribe(() => {
+    docStorage.saveDoc(store.getState().doc)
+})
 
 const rootElement = document.getElementById('root')
 render(
